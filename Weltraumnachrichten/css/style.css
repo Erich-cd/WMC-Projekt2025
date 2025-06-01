@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b0c10;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+header {
+    background-color: #1f2833;
+    padding: 1rem;
+    text-align: center;
+}
+nav a {
+    color: #66fcf1;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 2rem;
+}
+h1, h2 {
+    color: #66fcf1;
+}
+
+
+.vorschaucontainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 2rem;
+}
+.vorschaukarte {
+    background-color: #1f2833;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.vorschaukarte h3 {
+    margin-top: 0;
+}
+.vorschaukarte a {
+    color: #45a29e;
+    text-decoration: none;
+}
+.vorschaukarte a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #1f2833;
+    text-align: center;
+    padding: 1rem;
+}
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    main {
+      padding: 1rem;
+    }
+
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+}
