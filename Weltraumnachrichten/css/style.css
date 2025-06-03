@@ -27,9 +27,37 @@ nav a:hover {
 }
 
 
+
+
+.search-container {
+    margin: 1rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+.search-container input {
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #66fcf1;
+    border-radius: 5px;
+    background-color: #1f2833;
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+.search-container input::placeholder {
+    color: #c5c6c7;
+}
+.search-container input:focus {
+    outline: none;
+    border-color: #45a29e;
+}
+
+
+
+
 .vorschaucontainer {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-bottom: 2rem;
 }
@@ -51,6 +79,7 @@ nav a:hover {
 .vorschaukarte a:hover {
     text-decoration: underline;
 }
+
 
 
 footer {
