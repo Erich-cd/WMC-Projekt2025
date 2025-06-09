@@ -29,12 +29,12 @@ nav a:hover {
 
 
 
-.search-container {
+.suchcontainer {
     margin: 1rem auto;
     max-width: 600px;
     text-align: center;
 }
-.search-container input {
+.suchcontainer input {
     padding: 0.5rem;
     width: 80%;
     max-width: 400px;
@@ -44,10 +44,10 @@ nav a:hover {
     color: #f0f0f0;
     font-size: 1rem;
 }
-.search-container input::placeholder {
+.suchcontainer input::placeholder {
     color: #c5c6c7;
 }
-.search-container input:focus {
+.suchcontainer input:focus {
     outline: none;
     border-color: #45a29e;
 }
@@ -88,7 +88,9 @@ footer {
     padding: 1rem;
 }
 
-  /* Mobile */
+
+
+
   @media (max-width: 600px) {
     main {
       padding: 1rem;

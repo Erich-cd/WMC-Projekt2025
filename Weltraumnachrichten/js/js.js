@@ -16,7 +16,7 @@ function erstelleKarte(artikel, maxZeichen = 100) {
   let link = document.createElement('a');
   link.href = artikel.url;
   link.textContent = 'mehr lesen';
-  link.target = '_blank';
+  link.target = '_blank'; //neuer tab
 
   karte.append(titel, zusammenfassung, link);
   return karte;
@@ -48,14 +48,14 @@ function ladeDaten(typ, containerId, anzahl, maxZeichen) {
   fetch(`https://api.spaceflightnewsapi.net/v4/${typ}/?limit=${anzahl}`)
     .then(res => res.json())
     .then(daten => {
-      // anzeige der daten
+    
       updateDisplay(daten, containerId, maxZeichen);
 
       // suchleiste finden und eventlistener 
-      let searchInput = document.getElementById('search-input');
-      if (searchInput) {
-        searchInput.addEventListener('input', () => {
-          updateDisplay(daten, containerId, maxZeichen, searchInput.value);
+      let suchInput = document.getElementById('suchinput');
+      if (suchInput) {
+          suchInput.addEventListener('input', () => {
+          updateDisplay(daten, containerId, maxZeichen, suchInput.value);
         });
       }
     })
@@ -66,7 +66,7 @@ function ladeDaten(typ, containerId, anzahl, maxZeichen) {
 window.addEventListener('DOMContentLoaded', () => {
   let pfad = window.location.pathname;
 
-  if (pfad === '/' || pfad.endsWith('index.html')) {
+  if (pfad.endsWith('index.html')) {
     ladeDaten('articles', 'articlesview', 3, 100);
     ladeDaten('blogs', 'blogsview', 3, 100);
   } else if (pfad.endsWith('articles.html')) {
